@@ -3,11 +3,12 @@ import { useParams } from "react-router-dom";
 import { useCart } from "../contexts/CartContext.jsx";
 import { gsap } from "gsap";
 import { ShoppingCart, Truck, Shield, AlertCircle } from "lucide-react";
-import { useProductAvailability } from "../hooks/useProductAvailability.js";
+
 import ItemCard from "../Utils/ItemCard.jsx";
 import ItemRating from "../Utils/ItemRating.jsx";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { useProductAvailability } from "../lib/useProductAvailability.js";
 const ItemDetails = () => {
   const { id } = useParams();
   const { addToCart } = useCart();

@@ -2,8 +2,10 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { StarIcon, ShoppingCart, AlertCircle } from "lucide-react";
-import { useProductAvailability } from "../hooks/useProductAvailability.js";
+
 import toast from "react-hot-toast";
+import { useProductAvailability } from "../lib/useProductAvailability";
+
 const ItemCard = React.memo(({ product, addToCart }) => {
   const { isAvailable, isLoading } = useProductAvailability(product.id);
   const cardRef = useRef(null);
