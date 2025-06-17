@@ -4,7 +4,8 @@ import { gsap } from "gsap";
 import { StarIcon, ShoppingCart, AlertCircle } from "lucide-react";
 
 import toast from "react-hot-toast";
-import { useProductAvailability } from "../lib/useProductAvailability";
+import { useProductAvailability } from "../hook/useProductAvailability";
+
 
 const ItemCard = React.memo(({ product, addToCart }) => {
   const { isAvailable, isLoading } = useProductAvailability(product.id);

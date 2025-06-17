@@ -8,7 +8,7 @@ import ItemCard from "../Utils/ItemCard.jsx";
 import ItemRating from "../Utils/ItemRating.jsx";
 import axios from "axios";
 import toast from "react-hot-toast";
-import { useProductAvailability } from "../lib/useProductAvailability.js";
+import { useProductAvailability } from "../hook/useProductAvailability.js";
 const ItemDetails = () => {
   const { id } = useParams();
   const { addToCart } = useCart();

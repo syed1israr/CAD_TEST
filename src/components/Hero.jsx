@@ -3,7 +3,8 @@ import { useCart } from "../contexts/CartContext";
 import { useFilter } from "../contexts/FilterContext";
 import ItemCard from "../Utils/ItemCard";
 import Filter_Component from "../Utils/Filter_Component";
-import { useProducts } from "../../hook/useProducts";
+import { useProducts } from "../hook/useProducts";
+
 
 const Hero = () => {
   const { filters } = useFilter();

@@ -1,11 +1,12 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { useLocation } from "react-router-dom";
-import { useIsMobile } from "../../hook/useIsMobile"
+import { useIsMobile } from "../hook/useIsMobile";
+
 
 const Footer = () => {
   const containerRef = useRef(null);
-    const location = useLocation();
+  const location = useLocation();
   const showFooter = location.pathname !== "/cart";
 const isMobile = useIsMobile();
   useEffect(() => {
