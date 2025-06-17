@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { useCart } from "../contexts/CartContext.jsx";
 import { gsap } from "gsap";
-import { ShoppingCart, Truck, Shield, AlertCircle } from "lucide-react";use
+import { ShoppingCart, Truck, Shield, AlertCircle } from "lucide-react";
 
 import ItemCard from "../Utils/ItemCard.jsx";
 import ItemRating from "../Utils/ItemRating.jsx";
