@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { useLocation } from "react-router-dom";
-import { useIsMobile } from "../lib/useIsMobile"
+import { useIsMobile } from "../../hook/useIsMobile"
 
 const Footer = () => {
   const containerRef = useRef(null);
