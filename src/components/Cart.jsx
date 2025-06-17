@@ -2,7 +2,6 @@ import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "../contexts/CartContext";
-
 const Cart = () => {
     // function from cart context API 
   const { cart, removeFromCart, updateQuantity, cartTotal } = useCart();

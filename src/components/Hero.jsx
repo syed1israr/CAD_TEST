@@ -1,9 +1,9 @@
 
 import { useCart } from "../contexts/CartContext";
 import { useFilter } from "../contexts/FilterContext";
-import ItemCard from "../Utils/ItemCard";
-import Filter_Component from "../Utils/Filter_Component";
 import { useProducts } from "../hook/useProducts";
+import Filter_Component from "../Utils/Filter_Component";
+import ItemCard from "../Utils/ItemCard";
 
 
 const Hero = () => {

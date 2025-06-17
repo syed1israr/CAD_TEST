@@ -1,8 +1,8 @@
+import { gsap } from "gsap";
+import { Filter, RefreshCw } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useFilter } from "../contexts/FilterContext";
-import { Filter, RefreshCw } from "lucide-react";
-import { gsap } from "gsap";
-import { debounce } from "../hook/useDebounce"
+import { debounce } from "../hook/useDebounce";
 
 const FilterComponent = () => {
   const { filters, updateFilters, resetFilters } = useFilter();

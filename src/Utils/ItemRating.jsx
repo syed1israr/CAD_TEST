@@ -1,5 +1,5 @@
-import { useState } from "react"
 import { Star } from "lucide-react"
+import { useState } from "react"
 
 const ItemRating = ({ initialRating, onRate }) => {
   const [rating, setRating] = useState(initialRating)

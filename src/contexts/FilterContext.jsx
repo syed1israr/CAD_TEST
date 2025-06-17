@@ -1,8 +1,9 @@
 import { createContext, useContext, useState } from "react"
 
-const FilterContext = createContext()
 
-export const useFilter = () => useContext(FilterContext)
+const FilterContext = createContext()
+export const useFilter = () => useContext(FilterContext);
+
 
 export const FilterProvider = ({ children }) => {
   const [filters, setFilters] = useState({

@@ -1,14 +1,14 @@
-import { useState, useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { AlertCircle, Shield, ShoppingCart, Truck } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useCart } from "../contexts/CartContext.jsx";
-import { gsap } from "gsap";
-import { ShoppingCart, Truck, Shield, AlertCircle } from "lucide-react";
-
-import ItemCard from "../Utils/ItemCard.jsx";
-import ItemRating from "../Utils/ItemRating.jsx";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useProductAvailability } from "../hook/useProductAvailability.js";
+import ItemCard from "../Utils/ItemCard.jsx";
+import ItemRating from "../Utils/ItemRating.jsx";
+
 const ItemDetails = () => {
   const { id } = useParams();
   const { addToCart } = useCart();

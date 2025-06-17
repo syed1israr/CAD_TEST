@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { useIsMobile } from "../hook/useIsMobile";
 

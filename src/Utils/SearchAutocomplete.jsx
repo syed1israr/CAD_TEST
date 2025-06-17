@@ -1,9 +1,9 @@
-import { useState, useEffect, useRef } from "react";
-import { useFilter } from "../contexts/FilterContext";
-import { Search } from "lucide-react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Search } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
+import { useFilter } from "../contexts/FilterContext";
 
 const SearchAutocomplete = () => {
   

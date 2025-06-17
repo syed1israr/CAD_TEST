@@ -1,5 +1,6 @@
-import { createContext, useContext, useState, useEffect } from "react";
 import axios from "axios";
+import { createContext, useContext, useEffect, useState } from "react";
+
 
 const CTX = createContext();
 export const useCart = () => useContext(CTX);

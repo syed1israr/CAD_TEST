@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
+import { useCallback, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 const PRODUCTS_PER_PAGE = 12;

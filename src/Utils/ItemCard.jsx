@@ -1,7 +1,7 @@
+import { gsap } from "gsap";
+import { AlertCircle, ShoppingCart, StarIcon } from "lucide-react";
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { gsap } from "gsap";
-import { StarIcon, ShoppingCart, AlertCircle } from "lucide-react";
 
 import toast from "react-hot-toast";
 import { useProductAvailability } from "../hook/useProductAvailability";

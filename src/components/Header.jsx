@@ -1,9 +1,9 @@
+import gsap from "gsap"
+import { ShoppingBag } from "lucide-react"
+import { useEffect, useRef } from "react"
 import { Link } from "react-router-dom"
 import { useCart } from "../contexts/CartContext"
-import { ShoppingBag } from "lucide-react"
 import SearchAutocomplete from "../Utils/SearchAutocomplete"
-import { useEffect, useRef } from "react"
-import gsap from "gsap"
 
 const Header = () => {
   const { cart } = useCart()
