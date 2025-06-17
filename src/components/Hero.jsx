@@ -30,7 +30,7 @@ const Hero = () => {
         </div>
         <div className="flex justify-between items-center mt-8">
           <button
-            className="px-4 py-2 bg-black text-white disabled:opacity-50"
+            className="px-3 py-[10px] bg-black text-white disabled:opacity-50"
             onClick={() => setPage(prev => Math.max(0, prev - 1))}
             disabled={page === 0 || loading}
           >
@@ -40,7 +40,7 @@ const Hero = () => {
             Page {page + 1} / {Math.ceil(total / PRODUCTS_PER_PAGE)}
           </span>
           <button
-            className="px-4 py-2 bg-black text-white disabled:opacity-50"
+            className="px-3 py-[10px] bg-black text-white disabled:opacity-50"
             onClick={() => setPage(prev => prev + 1)}
             disabled={(page + 1) * PRODUCTS_PER_PAGE >= total || loading}
           >

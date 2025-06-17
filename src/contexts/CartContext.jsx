@@ -34,7 +34,8 @@ export const CartProvider = ({ children }) => {
     };
   }, []);
 
-  const pushToCart = async (p) => {
+  const addToCart = async (p) => {
+    console.log("Adding to cart:", p);
     try {
       await axios.post("https://dummyjson.com/carts/add", {
         userId: 1,
@@ -55,7 +56,7 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  const discardFromCart = async (pid) => {
+  const removeFromCart = async (pid) => {
     try {
       const filtered = items.filter((i) => i.id !== pid);
       const { data } = await axios.put(`https://dummyjson.com/carts/${id}`, {
@@ -67,7 +68,7 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  const modifyQty = async (pid, qty) => {
+  const updateQuantity = async (pid, qty) => {
     try {
       const updated = items.map((i) =>
         i.id === pid ? { ...i, quantity: Math.max(0, qty) } : i
@@ -81,10 +82,10 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  const total = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
+  const cartTotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
 
   return (
-    <CTX.Provider value={{ cart: items, addToCart: pushToCart, removeFromCart: discardFromCart, updateQuantity: modifyQty, cartTotal: total }}>
+    <CTX.Provider value={{ cart: items, addToCart, removeFromCart, updateQuantity, cartTotal }}>
       {children}
     </CTX.Provider>
   );

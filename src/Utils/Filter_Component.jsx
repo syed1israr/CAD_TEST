@@ -87,7 +87,7 @@ const Filter_Component = () => {
         </div>
         <button
           onClick={resetFilters}
-          className="flex items-center gap-2 px-4 py-2 rounded-xl border border-black text-black font-semibold hover:bg-black hover:text-white transition-all shadow-sm"
+          className="flex items-center gap-2 px-3 py-[10px] rounded-xl border border-black text-black font-semibold hover:bg-black hover:text-white transition-all shadow-sm"
         >
           <RefreshCw className="w-4 h-4" />
           Reset

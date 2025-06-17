@@ -63,7 +63,7 @@ const SearchAutocomplete = () => {
         <input
           type="text"
           placeholder="Search products..."
-          className="text-gray-950 w-full px-4 py-2 pr-10 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="text-gray-950 w-full px-3 py-[10px] pr-10 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
           value={filters.search}
           onChange={handleInputChange}
           onFocus={() => setShowSuggestions(true)}
@@ -77,7 +77,7 @@ const SearchAutocomplete = () => {
             <li
               key={product.id}
               onClick={() => handleSuggestionClick(product)}
-              className="text-gray-950 px-4 py-2 hover:bg-gray-100 cursor-pointer"
+              className="text-gray-950 px-3 py-[10px] hover:bg-gray-100 cursor-pointer"
             >
               {product.title}
             </li>
