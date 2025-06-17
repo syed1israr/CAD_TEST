@@ -7,7 +7,7 @@ const Footer = () => {
   const containerRef = useRef(null);
     const location = useLocation();
   const showFooter = location.pathname !== "/cart";
-  const isMobile = useIsMobile();
+const isMobile = useIsMobile();
   useEffect(() => {
     gsap.fromTo(
       containerRef.current,
