@@ -2,8 +2,11 @@ import { useState, useEffect, useRef } from "react";
 import { useFilter } from "../contexts/FilterContext";
 import { Search } from "lucide-react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const SearchAutocomplete = () => {
+  
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const { filters, updateFilters } = useFilter();
@@ -29,6 +32,7 @@ const SearchAutocomplete = () => {
         setShowSuggestions(true)
       } catch (err) {
         console.error("Could not fetch suggestions:", err.message);
+         toast.error("Could not fetch suggestions")
         setSuggestions([]);
       }
     };
@@ -71,7 +75,7 @@ const SearchAutocomplete = () => {
         <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
       </div>
 
-      {showSuggestions && suggestions.length > 0 && (
+      {showSuggestions  && (
         <ul className="absolute z-10 w-full bg-white gap-y-2 mt-1 rounded-md shadow-lg max-h-60 overflow-x-hidden">
           {suggestions.map((product) => (
             <li
@@ -79,7 +83,9 @@ const SearchAutocomplete = () => {
               onClick={() => handleSuggestionClick(product)}
               className="text-gray-950 px-3 py-[10px] hover:bg-gray-100 cursor-pointer"
             >
-              {product.title}
+              <Link to={`/product/${product.id}`}>
+                {product.title}
+              </Link>
             </li>
           ))}
         </ul>

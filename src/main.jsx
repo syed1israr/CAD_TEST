@@ -4,11 +4,12 @@ import App from "./App.jsx"
 import { CartProvider } from "./contexts/CartContext"
 import { FilterProvider } from "./contexts/FilterContext"
 import "./index.css"
-
+import { Toaster } from "react-hot-toast";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <CartProvider>
       <FilterProvider>
+       <Toaster position="bottom-center" reverseOrder={false} />
         <App />
       </FilterProvider>
     </CartProvider>

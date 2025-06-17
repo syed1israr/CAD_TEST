@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { StarIcon, ShoppingCart, AlertCircle } from "lucide-react";
 import { useProductAvailability } from "../hooks/useProductAvailability.js";
-
+import toast from "react-hot-toast";
 const ItemCard = React.memo(({ product, addToCart }) => {
   const { isAvailable, isLoading } = useProductAvailability(product.id);
   const cardRef = useRef(null);
@@ -51,7 +51,7 @@ const ItemCard = React.memo(({ product, addToCart }) => {
             <div className="h-10 bg-black/10 animate-pulse rounded-lg" />
           ) : isAvailable ? (
             <button
-              onClick={() => addToCart(product)}
+              onClick={() => {addToCart(product), toast.success(`${product.title} added to cart!`);}}
               className="w-full py-2 px-4 rounded-lg border border-black text-black font-medium flex items-center justify-center gap-2 hover:bg-black hover:text-white transition-all duration-300"
             >
               <ShoppingCart className="w-5 h-5" />

@@ -12,9 +12,16 @@ const Hero = () => {
   const {
     filteredProducts,loading,error, page,total,setPage,PRODUCTS_PER_PAGE
   } = useProducts(filters);
-  
-
+    
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen bg-white">
+        <div className="animate-spin h-24 w-24 border-4 border-black border-t-transparent rounded-full" />
+      </div>
+    );
+  }
   return (
+    <>
     <div className="flex flex-col md:flex-row">
       
       <div className="flex-1 px-6">
@@ -49,6 +56,7 @@ const Hero = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

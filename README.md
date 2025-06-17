@@ -21,6 +21,7 @@ A next-gen product discovery UI for the Cad & Cart ecommerce platform, built wit
 - [Axios](https://axios-http.com/)
 - [Radix UI](https://www.radix-ui.com/)
 - [Lucide Icons](https://lucide.dev/)
+- [toast](https://react-hot-toast.com/)
 - [Postman](https://www.postman.com/product/what-is-postman/)
 
 ## Project Structure

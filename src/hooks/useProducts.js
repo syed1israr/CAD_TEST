@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 const PRODUCTS_PER_PAGE = 12;
 
@@ -13,7 +14,7 @@ export const useProducts = (filters) => {
   const fetchProducts = useCallback(async () => {
     setLoading(true);
     setError(null);
-
+    
     const baseURL = import.meta.env.VITE_API_BASE_URL;
     const offset = page * PRODUCTS_PER_PAGE;
 
@@ -31,7 +32,8 @@ export const useProducts = (filters) => {
       setTotal(data.total || 0);
     } catch (err) {
       console.error("Error fetching products:", err.message);
-      setError("Something went wrong while loading products.");
+       setError("Something went wrong while loading products.");
+       toast.error("Failed to check availability")
     } finally {
       setLoading(false);
     }

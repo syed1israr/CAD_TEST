@@ -7,7 +7,7 @@ import { useProductAvailability } from "../hooks/useProductAvailability.js";
 import ItemCard from "../Utils/ItemCard.jsx";
 import ItemRating from "../Utils/ItemRating.jsx";
 import axios from "axios";
-
+import toast from "react-hot-toast";
 const ItemDetails = () => {
   const { id } = useParams();
   const { addToCart } = useCart();
@@ -117,7 +117,7 @@ const ItemDetails = () => {
               <div className="h-14 w-full rounded-lg bg-black/10 animate-pulse" />
             ) : isAvailable ? (
               <button
-                onClick={() => addToCart(product)}
+                onClick={() => {addToCart(product), toast.success(`${product.title} added to cart!`);}}
                 className="w-full border border-black text-black py-4 px-6 rounded-lg font-semibold text-lg hover:bg-black hover:text-white transition-all duration-300"
               >
                 <div className="flex items-center justify-center">

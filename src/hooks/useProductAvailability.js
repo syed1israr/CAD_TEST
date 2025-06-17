@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 export const useProductAvailability = (productId) => {
   const [isAvailable, setIsAvailable] = useState(true);
@@ -17,6 +18,7 @@ export const useProductAvailability = (productId) => {
         }
       } catch (err) {
         console.error("Failed to check availability:", err.message);
+        toast.error("Failed to check availability")
         if (isMounted) setIsAvailable(false);
       } finally {
         if (isMounted) setIsLoading(false);
